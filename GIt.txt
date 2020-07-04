@@ -4,15 +4,19 @@ Index / Stage：暂存区
 Repository：仓库区（或本地仓库）
 Remote：远程仓库
 
+工作区分为：本地文件、.git文件夹（版本库，包括暂存区stage）
+
+
 二、命令速查
 git init                    初始化当前文件夹
 git add filename            将filename文件添加到暂存区
 git commit -m 'comment'     将暂存区文件提交到本地仓库，并添加修改说明：comment
-git status                  查看暂存区里面是否有未提交到仓库的新文件（Changes to be committed：new file）或修改（Changes to be committed：modiied）、
+git status                  查看暂存区里面是否有未提交到仓库的新文件（Changes to be committed：new file）或修改（Changes to be committed：modified）、
                             查看工作区文件是否有未提交到仓库的文件（Untracked files）或未提交的修改（Changes not staged for commit）
-git diff filename           查看filename文件与仓库文件有什么不同、新文件无法查看
+git diff filename           查看filename文件与仓库文件有什么不同，新文件、暂存区文件无法查看
 git log                     查看当前文件夹仓库区的提交记录、不显示退回版本记录
 git log –-pretty=oneline    查看当前文件夹仓库区的提交记录（每条记录只显示为一行：版本号 提交评论）
 git reset --hard HEAD^      退回到前n个版本（n：^的数量，或者git reset --hard HEAD~n）
 git reflog                  查看所有版本修改记录以及版本号
 git reset --hard 版本号     可以回到任何一个历史版本（此操作可以撤销回退旧版本操作）    
+git checkout --filename     撤销filename文件工作区中的修改，如果暂存区没有该文件的版本，则本地文件恢复到仓库文件版本；若有，则恢复到暂存区的版本
