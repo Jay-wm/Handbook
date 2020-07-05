@@ -11,11 +11,13 @@ Remote：远程仓库，GitHub账户的相关文件在git服务器或某一可�
 （3）登录github，打开”settings”中的SSH Keys页面，,填上Title，在Key文本框里黏贴id_rsa.pub文件的内容（查看方法：在文件所在位置运行more id_rsa.pub）,然后点击“Add SSH Key”
 （4）创建一个空仓库，复制仓库地址
 （5）运行git remote add origin https://github......
-（6）git push -f origin master
+（6）git push -f origin master  //强制推送到远程仓库，会覆盖掉远程你哼仓库初始化的readme.txt文件
 （7）输入用户名及密码
+
 
 三、远程仓库克隆到本地仓库
 git clone https://github......（仓库网址）
+
 
 四、命令速查
 git init                    初始化当前文件夹
@@ -30,6 +32,7 @@ git reset --hard HEAD^      退回到前n个版本（n：^的数量，或者git 
 git reflog                  查看所有版本修改记录以及版本号
 git reset --hard 版本号     可以回到任何一个历史版本（此操作可以撤销回退旧版本操作）    
 git checkout --filename     撤销filename文件工作区中的修改，如果暂存区没有该文件的版本，则本地文件恢复到仓库文件版本；若有，则恢复到暂存区的版本
+git push origin branchname  将本地branchname的更新（包括主分支master）推送到远程仓库
 
 
 分支
@@ -63,3 +66,17 @@ git stash branch                                从最新的stash创建分支
 （1）rm filename                 /*此步骤之后使用：git checkout -- filename即可恢复*/
 （2）git add filename            /*此步骤之后使用：git checkout -f恢复*/
 （3）git commit -m 'comment'     /*此步骤之后使用：git reset -- hard 版本号或者使用：git reset --hard HEAD^恢复*/
+
+
+多人协作
+git remote                               要查看远程库的信息
+git remote -v                            要查看远程库的详细信息
+git checkout –b dev origin/dev           创建远程仓库的origin的dev分支到本地，因为git clone只能克隆主分支master到本地
+git pull                                 将当前分支的远程仓库更新到本地，只能更新主分支master
+
+/*多人更修改同一分支，git push origin branchname修改时出现冲突问题（其他人比你推送早，远程仓库与本地仓库起始文件不一致导致），
+  先（1）、（2），解决冲突后在git push origin branchname
+  */
+git branch --set-upstream dev origin/dev
+git pull
+
