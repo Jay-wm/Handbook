@@ -35,7 +35,8 @@ copy                        拷贝文件
                             例：copy /B art_2.7z.001+art_2.7z.002 art_2.7z    // 将当前目录下的art_2.7z.001、art_2.7z.002文件合并生成art_2.7z
 
 xcopy                       更强大的复制命令
-                            例：xcopy c:\bat\hai d:\hello\ /y /h /e /f /c    // 将c:\bat\hai中的所有内容拷贝到d:\hello中  注意：需要在hello后加上\  表示                                   hello为一个目录，否则xcopy会询问hello是F，还是D
+                            例：xcopy c:\bat\hai d:\hello\ /y /h /e /f /c    // 将c:\bat\hai中的所有内容拷贝到d:\hello中  注意：需要在hello后加上\  表示   
+                                hello为一个目录，否则xcopy会询问hello是F，还是D
                             例：xcopy c:\bat\hai d:\hello\ /d:12-29-2010  // 将c:\bat\hai中的2010年12月29日后更改的文件拷贝到d:\hello中
 
 robocopy                    更强大的复制命令
