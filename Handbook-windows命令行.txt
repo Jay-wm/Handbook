@@ -1,4 +1,4 @@
-一、常用命令
+一、常用命令/https://www.cnblogs.com/kekec/p/3662125.html
 win + R                     打开‘运行’，输入cmd即可打开命令行窗口
 shift + 右键                 快速在该文件夹下打开cmd窗口
 cmd /c command              直接运行command命令，完成后关闭cmd窗口
