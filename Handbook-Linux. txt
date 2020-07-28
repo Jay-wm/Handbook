@@ -4,3 +4,16 @@ https://www.runoob.com/linux/linux-command-manual.html
   1）cd命令切换到文件目录
   2）tar -zxvy 文件名    --解压文件
   3）
+
+
+二、git版本手动更新
+  1）安装依赖：yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel gcc perl-ExtUtils-MakeMaker
+  2）下载git包：wget https://github.com/git/git/archive/v2.8.0.tar.gz
+  3）解压：tar -zxcf v2.8.0.tar.gz
+  4）进入git编译：cd git-2.8.0/然后编译sudo make prefix=/usr/local all
+  5）执行安装命令：sudo make prefix=/usr/local install
+  6）查看版本git --version
+  7）配置ssh秘钥：ssh-keygen -t rsa -C "fanxing531837"
+  8）私钥添加到本地系统：ssh-add ~/.ssh/id_rsa（–如果系统提示：could not open a connection to your authentication agent：则需要执行一下命令：ssh-agent bash然后再执行上述的ssh-add id_rsa命令）
+  9）看一下：cat ~/.ssh/id_rsa.pub
+  10）git需要配置用户名和邮箱：git config --global user.name 'fanxing'和git config --global user.email '531837586@qq.com'
