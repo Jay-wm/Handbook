@@ -1,0 +1,16 @@
+一、QPixmap/QImage/QPicture/QBitmap
+1、QBitmap -- 显示黑白图片，父类QPixmap
+2、QPixmap -- 图片类，主要用来显示，它针对于显示器显示做了特殊优化，依赖于平台的（不同平台进行不同的优化），只能在主线程中使用（UI线程）
+3、QImage  -- 图片类，不依赖于平台，（图片传输，可以在多线程中对齐进行操作）
+
+
+
+
+
+
+ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAyCUvGFPDJ5TzMcUj69t7Dp8+QdAeTcH4+jDW/
+1ilED4RnnhDAC9uO7WyIJS09FmGoIslsHynQ6PJXzF9OSOuaBvdRfwM43MnX1w1w3yKqwbtz
+VRMSCbr8BaDKbpr0nn7iz3JabdFpy+bVMhbNzPqPKDPLwJ8Fxxv9VZEqKbERZxvPxjiXx6cOb
+UQINe2oXhp89R06urIApfqIX7V7hgcfqZsfiqxJnpYUQnavmTtqIFQV/A0tSeE+MZlAjmj0tz
+ZMoQvoCSdtU9AsoaeUPw7knV000U+xMeOZ4mJsamZ21Yki1VtquCgiEZOQOwvhfysoZYwdXWQ5KlxGzXjLSzooQ== rsa-key-20201017
+ssh-rsa 2048 a9:c6:d9:1d:9f:53:9d:58:79:c7:63:78:59:3e:ed:5f
