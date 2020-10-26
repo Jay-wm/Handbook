@@ -55,3 +55,14 @@ target_nclude_directories(<target>[SYSTEM][BEFORE]<INTERFACE|PUBLIC|PRIVATE> [it
 
 
 SET_TARGET_PROPERTIES设置目标的一些属性来改变它们构建的方式
+
+
+二、常用变量
+CMAKE_INSTALL_PREFIX    构建install的路径
+$ENV{HOME}              HOME环境下的目录路径
+PROJECT_NAME            工程名变量
+<PKG>_INCLUDE_DIR       导入包头文件全路径
+<PKG>_LIBRARIES         导入库文件的全路径
+PROJECT_SOURCE_DIR      构建工程的全路径
+CMAKE_VERSION           Cmake的版本号
+CMAKE_SOURCE_DIR        源码树的顶层路径
