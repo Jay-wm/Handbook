@@ -27,3 +27,12 @@
   链接器 --> 常规 --> 附加库目录 --> 添加xxx.lib文件路径
   链接器 --> 输入 --> 附加依赖项 --> 添加xxx.lib文件
   xxx.dll在调试时可以不放在exe文件路径下，exe执行时必须有
+
+
+三、#x、##x、x##、##x##、变量作用
+（1）#变量
+在C语言的宏中，#的功能是将其后面的宏参数进行字符串化操作（Stringfication），简单说就是在对它所引用的宏变量通过替换后在其左右各加上一个双引号
+（2）##变量
+## 被称为连接符（concatenator），用来将两个Token连接为一个Token。注意这里连接的对象是Token就行，而不一定是宏的变量。比如你要做一个菜单项命令名和函数指针组成的结构体的数组，并且希望在函数名和菜单项命令名之间有直观的、名字上的关系。
+#define LINK_MULTIPLE(a,b,c,d) a##_##b##_##c##_##d //注意这里的规则（a##开头，##d结束，中间都用##x##）
+typedef struct _record_type LINK_MULTIPLE(name,company,position,salary);
