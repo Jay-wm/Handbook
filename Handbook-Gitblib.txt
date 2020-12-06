@@ -9,3 +9,19 @@ Gitblib：版本管理工具，是git服务器的b/s版
 三、使用idea操作远程的git服务器前提
  （1）idea集成了git插件（默认已经集成）
  （2）需要安装客户端git.exe
+
+
+四、安装要点
+1、java开发环境（JDK、JRE），安装最新版即可
+
+2、环境变量配置
+JAVA_HOME -> JRE/JDK安装路径
+CLASSPATH -> .;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;
+PATH - > %JAVA_HOME%\bin
+CD - > gitblit的路径
+
+3、gitblit/data/defaults.properties设置
+git.repositoriesFolder =   -> 仓库位置
+server.httpsBindInterface = -> 服务器地址，放在可移动硬盘直接localhost即可
+server.httpPort = -> 服务器端口 
+注：可以将该文件复制备份默认配置，重命名一个 xxx.properties 的文件，然后修改 gitblit.properties 的 include = xxx.properties
