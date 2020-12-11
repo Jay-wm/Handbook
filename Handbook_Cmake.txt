@@ -1,3 +1,9 @@
+问题总结
+1、taget_link_libraries() 如果库之间有依赖关系
+例如：库A 依赖 库B
+则 库A 应放在 库B 的前面，即 taget_link_libraries(projectname A B)
+
+基本用法
 一、命令
 command(arg1 arg2 ...)       #运行命令
 set(var_name var_value)      #定义变量或者给已经存在的变量赋值
