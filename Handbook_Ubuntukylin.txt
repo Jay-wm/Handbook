@@ -11,3 +11,15 @@
   1、To remove the PPA, run command:
     sudo add-apt-repository --remove ppa:rock-core/qt4
   2、sudo apt remove --autoremove libqt4* libqtcore4 libqtgui4 libqtwebkit4 qt4*
+
+二、QtCreator 无法打开中文输入法，无法输入中文问题
+1、查找是否安装相关库
+  $: dpkg -L fcitx-frontend-qt5 | grep .so
+  /usr/lib/x86_64-linux-gnu/qt5/plugins/platforminputcontexts/libfcitxplatforminputcontextplugin.so
+2、如果未查到，安装库
+  sudo apt-get install fcitx-frontend-qt5 
+3、复制该库到QtCreator输入法库路径
+sudo cp /usr/lib/x86_64-linux-gnu/qt5/plugins/platforminputcontexts/libfcitxplatforminputcontextplugin.so ~/QtCreator安装路径/ib/Qt/plugins/platforminputcontexts/
+
+  
+  
