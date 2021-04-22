@@ -1,0 +1,13 @@
+一、Ubuntu 20.04 安装 Qt4（此方法只能默认安装 Qt4.8.7）
+
+1、由于Ubuntu.20.04 官方安装源仓库移除了对Qt4的支持，因此需要手动 adding the PPA
+  sudo add-apt-repository ppa:rock-core/qt4
+2、更新软件源
+  sudo apt update
+3、安装 Qt4（sudo apt install qt4后按Tab键可查看可供安装的程序）
+  sudo apt install PACKAGE_NAME（qt4-qmake/qt4-default） 
+  
+  注：卸载
+  1、To remove the PPA, run command:
+    sudo add-apt-repository --remove ppa:rock-core/qt4
+  2、sudo apt remove --autoremove libqt4* libqtcore4 libqtgui4 libqtwebkit4 qt4*
