@@ -31,7 +31,7 @@ sudo cp /usr/lib/x86_64-linux-gnu/qt5/plugins/platforminputcontexts/libfcitxplat
   sudo nfw allow 22
 2、重启防火墙
   sudo nfw reload
-3、安装ssh服务（客户端、服务端）
+3、安装ssh服务（客户端、服务端）（如传输文件时出现：ssh:connect to host IP port22: Connection refused）
   sudo apt install openssh-serve
   sudo apt install openssh-client
 4、重启电脑
