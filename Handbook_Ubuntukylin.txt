@@ -35,3 +35,5 @@ sudo cp /usr/lib/x86_64-linux-gnu/qt5/plugins/platforminputcontexts/libfcitxplat
   sudo apt install openssh-serve
   sudo apt install openssh-client
 4、重启电脑
+5、常用命令（https://www.runoob.com/linux/linux-comm-scp.html）
+  scp [可选参数] file_source file_target（例如：scp /home/root/filename root@IP:/home/root/）
