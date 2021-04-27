@@ -1,4 +1,4 @@
-操作系统：Ubuntu 20.04.01
+操作系统：Ubuntu 20.04.01/UbuntuKylin20.04.01
 
 一、Ubuntu 20.04 安装 Qt4（此方法只能默认安装 Qt4.8.7）
 
@@ -28,9 +28,9 @@ sudo cp /usr/lib/x86_64-linux-gnu/qt5/plugins/platforminputcontexts/libfcitxplat
   scp 是 secure copy 的缩写, scp 是 linux 系统下基于 ssh 登陆进行安全的远程文件拷贝命令。
   scp 是加密的，rcp 是不加密的，scp 是 rcp 的加强版。
 1、开放端口22
-  sudo nfw allow 22
+  sudo ufw allow 22
 2、重启防火墙
-  sudo nfw reload
+  sudo ufw reload/restart
 3、安装ssh服务（客户端、服务端）（如传输文件时出现：ssh:connect to host IP port22: Connection refused）
   sudo apt install openssh-serve
   sudo apt install openssh-client
