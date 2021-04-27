@@ -22,3 +22,6 @@ https://www.runoob.com/linux/linux-command-manual.html
   三、笔记本外接显示器，关闭、打开笔记本自身显示器
     sudo xrandr --output eDP-1 --off
     sudo xrandr --output eDP-1 --auto
+
+四、递归删除指定类型文件
+find ./ -name "*~"  | xargs rm 
