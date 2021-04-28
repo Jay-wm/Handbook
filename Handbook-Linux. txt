@@ -25,3 +25,11 @@ https://www.runoob.com/linux/linux-command-manual.html
 
 四、递归删除指定类型文件
 find ./ -name "*~"  | xargs rm 
+
+
+五、文件格式转换（GBK -> UTF-8）
+  enca -L zh_CN -x UTF-8 filename
+  Filename可以为：具体文件名，或当前文件夹下所有文件（./*），以及当前文件夹下所有文件夹里面所有得文件（./*/*）等
+  如遇到enca: Cannot convert `./checkDetailWidget.cpp' from unknown encoding
+  可使用 iconv -f GBK -t UTF-8 Filename -o Filename进行转换
+  注：enca 需要安装（sudo apt install enca） ，iconv 一般为Linux自带的命令
