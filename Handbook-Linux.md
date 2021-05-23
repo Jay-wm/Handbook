@@ -6,16 +6,16 @@
 
 ## 二、git版本编译安装
 
-  1）安装依赖：`yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel gcc perl-ExtUtils-MakeMaker`
-  2）下载git包：`wget https://github.com/git/git/archive/v2.8.0.tar.gz`
-  3）解压：`tar -zxcf v2.8.0.tar.gz`
-  4）进入git编译：`cd git-2.8.0/` 然后编译 `sudo make prefix=/usr/local all`
-  5）执行安装命令：`sudo make prefix=/usr/local install`
-  6）查看版本：`git --version`
-  7）配置ssh秘钥：`ssh-keygen -t rsa -C "fanxing531837"`
-  8）私钥添加到本地系统：`ssh-add ~/.ssh/id_rsa`（–如果系统提示：could not open a connection to your authentication agent：则需要执行一下命令：`ssh-agent bash` 然后再执行上述的 `ssh-add id_rsa` 命令）
-  9）看一下：`cat ~/.ssh/id_rsa.pub`
-  10）git需要配置用户名和邮箱：`git config --global user.name 'fanxing'` 和 `git config --global user.email '531837586@qq.com'`
+1. 安装依赖：`yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel gcc perl-ExtUtils-MakeMaker`
+2. 下载git包：`wget https://github.com/git/git/archive/v2.8.0.tar.gz`
+3. 解压：`tar -zxcf v2.8.0.tar.gz`
+4. 进入git编译：`cd git-2.8.0/` 然后编译 `sudo make prefix=/usr/local all`
+5. 执行安装命令：`sudo make prefix=/usr/local install`
+6. 查看版本：`git --version`
+7. 配置ssh秘钥：`ssh-keygen -t rsa -C "fanxing531837"`
+8. 私钥添加到本地系统：`ssh-add ~/.ssh/id_rsa`（–如果系统提示：could not open a connection to your authentication agent：则需要执行一下命令：`ssh-agent bash` 然后再执行上述的 `ssh-add id_rsa` 命令）
+9. 看一下：`cat ~/.ssh/id_rsa.pub`
+10. git需要配置用户名和邮箱：`git config --global user.name 'fanxing'` 和 `git config --global user.email '531837586@qq.com'`
 
 ## 三、笔记本外接显示器，关闭、打开笔记本自身显示器
 ​    `sudo xrandr --output eDP-1 --off`
